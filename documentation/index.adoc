@@ -13,6 +13,7 @@
 Resources:
 https://softchris.github.io/pages/dotnet-10-commands.html#_8-dotnet-sln
 https://codeburst.io/get-started-with-rabbitmq-on-docker-4428d7f6e46b
+https://zgadzaj.com/development/docker/docker-compose/containers/rabbitmq
 
 [source,bash]
 ----
