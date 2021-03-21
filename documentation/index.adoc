@@ -1,0 +1,31 @@
+= Setup
+:toc:
+:toclevels: 4
+:sectnums:
+:author: Ernst Vorsteveld
+:title: {doctitle}
+:title-page:
+:revnumber: 0.1
+:revdate: 21-03-2021
+
+== Setup directories
+
+Resources:
+https://softchris.github.io/pages/dotnet-10-commands.html#_8-dotnet-sln
+
+[source,bash]
+----
+dotnet new sln -n rabbitmq-openapi
+dotnet new classlib -o Messaging
+dotnet sln rabbitmq-openapi.sln add Messaging/Messaging.csproj --solution-folder libs
+
+# not used: 
+dotnet sln mysolution.sln add myapp\myapp.csproj
+----
+
+== Adding dependencies
+
+[source,bash]
+----
+dotnet add package RabbitMQ.Client
+----
