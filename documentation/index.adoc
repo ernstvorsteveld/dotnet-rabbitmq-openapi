@@ -25,6 +25,12 @@ dotnet new console -o console
 dotnet sln rabbitmq-openapi.sln add console/console.csproj
 dotnet add console/console.csproj reference Messaging/Messaging.csproj
 
+# add test lib
+dotnet new mstest -o MessagingTests
+dotnet add reference ../Messaging/Messaging.csproj
+
+dotnet new mstest -o consoleTests
+dotnet add reference ../console/console.csproj
 
 # not used: 
 dotnet sln mysolution.sln add myapp\myapp.csproj

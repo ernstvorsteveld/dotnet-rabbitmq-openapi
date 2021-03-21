@@ -1,7 +1,5 @@
 ﻿using System;
 using Microsoft.Extensions.Logging;
-using rabbitmqopenapi.Messaging;
-using rabbitmqopenapi.Messaging.Sender;
 
 namespace rabbitmqopenapi.console
 {
@@ -19,11 +17,6 @@ namespace rabbitmqopenapi.console
                    });
             ILogger logger = loggerFactory.CreateLogger<Program>();
             logger.LogDebug("Example log message, Debug level.");
-
-            RabbitMQConfigurator rabbitMQConfigurator = new Messaging.Sender.RabbitMQConfigurator();
-            ISender<IMessage> Sender = new RabbitMQSender<IMessage>(rabbitMQConfigurator.GetModel());
-
-            Sender.send(new QueueMessage("Hello World! From Ernst"));
         }
     }
 }
