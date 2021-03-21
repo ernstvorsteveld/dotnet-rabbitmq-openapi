@@ -19,6 +19,9 @@ dotnet new sln -n rabbitmq-openapi
 dotnet new classlib -o Messaging
 dotnet sln rabbitmq-openapi.sln add Messaging/Messaging.csproj --solution-folder libs
 
+dotnet new console -o console
+dotnet sln rabbitmq-openapi.sln add console/console.csproj
+
 # not used: 
 dotnet sln mysolution.sln add myapp\myapp.csproj
 ----
@@ -28,4 +31,5 @@ dotnet sln mysolution.sln add myapp\myapp.csproj
 [source,bash]
 ----
 dotnet add package RabbitMQ.Client
+dotnet add package Microsoft.Extensions.Logging.Console --version 6.0.0-preview.2.21154.6
 ----

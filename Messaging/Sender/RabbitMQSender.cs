@@ -2,9 +2,9 @@
 using RabbitMQ.Client;
 using System.Text;
 
-namespace rabbitmqopenapi.RabbitMQ.Sender
+namespace rabbitmqopenapi.Messaging.Sender
 {
-    class RabbitMQSender<QueueMessage> : ISender<IMessage>
+    public class RabbitMQSender<QueueMessage> : ISender<IMessage>
     {
         private IModel Channel;
 

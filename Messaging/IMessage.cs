@@ -1,6 +1,6 @@
-namespace rabbitmqopenapi.RabbitMQ 
+namespace rabbitmqopenapi.Messaging 
 {
-    interface IMessage 
+    public interface IMessage 
     {
         string GetText();
     }

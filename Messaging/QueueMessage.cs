@@ -1,6 +1,6 @@
-namespace rabbitmqopenapi.RabbitMQ
+namespace rabbitmqopenapi.Messaging
 {
-    class QueueMessage : IMessage
+    public class QueueMessage : IMessage
     {
         private string Text;
 

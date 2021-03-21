@@ -1,12 +1,16 @@
 using RabbitMQ.Client;
 
-namespace rabbitmqopenapi.RabbitMQ.Sender
+namespace rabbitmqopenapi.Messaging.Sender
 {
-    class RabbitMQConfigurator
+    public class RabbitMQConfigurator
     {
         private ISender<IMessage> Sender;
         private IModel Channel;
-        public ISender<IMessage> ISender { get; }
+        public ISender<IMessage> ISender {get;}
+        public IModel GetModel()
+        {
+            return Channel;
+        }
 
         public RabbitMQConfigurator()
         {

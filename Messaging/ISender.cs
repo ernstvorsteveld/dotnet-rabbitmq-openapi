@@ -1,6 +1,6 @@
-namespace rabbitmqopenapi.RabbitMQ
+namespace rabbitmqopenapi.Messaging
 {
-    interface ISender<T> where T : IMessage
+    public interface ISender<T> where T : IMessage
     {
         string send(T t);
     }
