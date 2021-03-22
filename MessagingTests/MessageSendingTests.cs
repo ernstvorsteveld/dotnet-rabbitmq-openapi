@@ -11,7 +11,7 @@ namespace rabbitmqopenapi.MessagingTests
         public void Should_Send_Simple_Message()
         {
             RabbitMQConfigurator rabbitMQConfigurator = new Messaging.Sender.RabbitMQConfigurator();
-            ISender<IMessage> Sender = new RabbitMQSender<IMessage>(rabbitMQConfigurator.GetModel());
+            ISender<IMessage> Sender = new RabbitMQSender<IMessage>(rabbitMQConfigurator.Channel);
 
             string message = "Hello World! From Ernst";
             var s = Sender.send(new QueueMessage(message));

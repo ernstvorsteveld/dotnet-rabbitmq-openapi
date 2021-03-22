@@ -4,13 +4,8 @@ namespace rabbitmqopenapi.Messaging.Sender
 {
     public class RabbitMQConfigurator
     {
-        private ISender<IMessage> Sender;
-        private IModel Channel;
-        public ISender<IMessage> ISender {get;}
-        public IModel GetModel()
-        {
-            return Channel;
-        }
+        public ISender<IMessage> Sender {get;}
+        public IModel Channel {get;}
 
         public RabbitMQConfigurator()
         {

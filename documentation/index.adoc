@@ -28,6 +28,7 @@ dotnet add console/console.csproj reference Messaging/Messaging.csproj
 # add test lib
 dotnet new mstest -o MessagingTests
 dotnet add reference ../Messaging/Messaging.csproj
+dotnet sln add MessagingTests/MessagingTests.csproj
 
 dotnet new mstest -o consoleTests
 dotnet add reference ../console/console.csproj
