@@ -11,3 +11,11 @@ services:
         - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
         - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq/
         - ~/.docker-conf/rabbitmq/etc/:/etc/rabbitmq/
+
+  mongodb:
+      image: mongo:latest
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: root
+      ports:
+        - 27017:27017

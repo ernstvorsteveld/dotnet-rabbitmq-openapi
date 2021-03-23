@@ -25,6 +25,9 @@ dotnet new console -o console
 dotnet sln rabbitmq-openapi.sln add console/console.csproj
 dotnet add console/console.csproj reference Messaging/Messaging.csproj
 
+dotnet new console -o MongoDB
+dotnet sln rabbitmq-openapi.sln add MongoDB/MongoDB.csproj
+
 # add test lib
 dotnet new mstest -o MessagingTests
 dotnet add reference ../Messaging/Messaging.csproj
@@ -45,4 +48,7 @@ dotnet sln mysolution.sln add myapp\myapp.csproj
 dotnet add package RabbitMQ.Client
 
 dotnet add package Microsoft.Extensions.Logging.Console --version 6.0.0-preview.2.21154.6
+
+dotnet add package MongoDB.Driver --version 2.12.0
 ----
+
