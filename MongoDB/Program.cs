@@ -15,6 +15,9 @@ namespace MongoDB
 
             var customer = new Customer();
             customer.LastName = "Boer";
+            customer.FirstName = "Johan";
+            customer.Contact = "0612345678";
+            customer.Email = "jan.boer@connecthing.com";
             collection.InsertOne(customer);
         }
     }
