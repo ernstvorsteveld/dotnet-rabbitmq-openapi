@@ -3,10 +3,9 @@ namespace rabbitmqopenapi.Messaging
     public class QueueMessage : IMessage
     {
         private string Text;
-
-        string IMessage.GetText()
+        public string GetText()
         {
-            return this.Text;
+            return Text;
         }
 
         public QueueMessage(string message)

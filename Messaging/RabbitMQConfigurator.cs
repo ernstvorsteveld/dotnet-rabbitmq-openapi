@@ -1,16 +1,19 @@
 using RabbitMQ.Client;
 
-namespace rabbitmqopenapi.Messaging.Sender
+namespace rabbitmqopenapi.Messaging
 {
     public class RabbitMQConfigurator
     {
         public ISender<IMessage> Sender {get;}
+
+        public IConsumer<IMessage> Consumer {get;}
         public IModel Channel {get;}
 
         public RabbitMQConfigurator()
         {
             this.Channel = CreateChannel();
             this.Sender = new RabbitMQSender<QueueMessage>(Channel);
+            this.Consumer = new RabbitMQConsumer<QueueMessage>(Channel); 
         }
 
         private IModel CreateChannel()
@@ -25,5 +28,7 @@ namespace rabbitmqopenapi.Messaging.Sender
                                  arguments: null);
             return channel;
         }
+
+
     }
 }
